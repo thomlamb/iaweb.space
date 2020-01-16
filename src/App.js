@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Addprod from './Components/AddProd/Index'
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <Addprod />
     </div>
+    
   );
 }
 
