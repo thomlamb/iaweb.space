@@ -1,8 +1,12 @@
 body {
-  background-color: #e5edf2;
+  background-color: #f5f7f9;
 }
 li{
   list-style:none;
+}
+
+.logo{
+  max-width: 150px;
 }
 .button {
   width: 32px;
@@ -36,4 +40,9 @@ li{
     -6px -6px 6px rgba(255,255,255,0.6),
     inset 8px 8px 8px rgba(0,0,0,0.05),
     inset -8px -8px 8px rgba(255,255,255,0.6);
+}
+
+nav{
+  background: #fff;
+  padding: 25px 5%;
 }

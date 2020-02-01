@@ -8,7 +8,6 @@ class InstancePage extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            // data : data,
             website: [],
         };
     }   
@@ -40,10 +39,15 @@ class InstancePage extends Component{
          }
         })
     }
+    getName(site) {
+        let str = site.application_name;
+        let num = str.indexOf("_");
+        return str.slice(0, num)
+    }
     render(){
         const instancelist = this.state.website.map((site,) =>        
         <Instance 
-            title={site.application_name}
+            title={ this.getName(site)}
             is_docker={this.getItemInfo(site)} 
             environment={site.environment}
             vhost_name={site.vhost_name}
@@ -52,10 +56,16 @@ class InstancePage extends Component{
             minisites={site.minisites}
         />)
         return(
-            <div className="instance-container">
-                <ul className="instance-ul"> 
-                    {instancelist}
-                </ul>
+            <div>
+                <div>
+                    <h1 className="imio-title"> iMio Website</h1>
+                </div>
+                <div className="instance-container">
+                    <h2>liste de instances</h2>
+                    <ul className="instance-ul"> 
+                        {instancelist}
+                    </ul>
+                </div>
             </div>
         )
     }

@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './index.css'
 class Instance extends Component{
     render(){
-        console.log(Object.keys(this.props.minisites).length)
-            const test =   Object.keys(this.props.minisites).map((obj, i) => {
+            const listMinisites =   Object.keys(this.props.minisites).map((obj, i) => {
                 return (
                   <li>
                       {obj}
                   </li>
                 )})
+            const siteName = () => {
+                return "111";
+            }
         return(
             <li className="instance_elements">
                 <h3>{this.props.title}</h3>
@@ -24,9 +26,9 @@ class Instance extends Component{
                 <div>
                     <span>{Object.keys(this.props.minisites).length}</span>
                     <ul>
-                        {test}
+                        {/* {listMinisites} */}
                     </ul>
-                    <button class="play-button"></button>
+                    {/* <button class="play-button"></button> */}
                 </div>
                 <br/>
             </li>
