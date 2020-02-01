@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-
+import './index.css'
 class Instance extends Component{
-
-        //     renderObj = () => { 
-        //   const test =   Object.keys(this.props.minisites).map((obj, i) => {
-        //       return (
-        //         <li>
-                    
-        //             {console.log("ff")}
-        //         </li>
-        //       )})}
     render(){
+        console.log(Object.keys(this.props.minisites).length)
             const test =   Object.keys(this.props.minisites).map((obj, i) => {
                 return (
                   <li>
@@ -18,16 +10,24 @@ class Instance extends Component{
                   </li>
                 )})
         return(
-            <li>
+            <li className="instance_elements">
                 <h3>{this.props.title}</h3>
-                <p>{this.props.is_docker}</p>
+                <div className="docker">
+                    <span >Docker</span >
+                    <div class={"cover " + (this.props.is_docker === "yes" ? 'green': 'red')}>
+                    </div>
+                </div>
                 <p>{this.props.environment}</p>
                 <p>{this.props.vhost_name}</p>
                 <p>{this.props.total_size}</p>
                 <p>{this.props.host}</p>
-                <ul>
-                    {test}
-                </ul>
+                <div>
+                    <span>{Object.keys(this.props.minisites).length}</span>
+                    <ul>
+                        {test}
+                    </ul>
+                    <button class="play-button"></button>
+                </div>
                 <br/>
             </li>
                 

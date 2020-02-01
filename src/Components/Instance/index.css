@@ -1,0 +1,100 @@
+.instance_elements{
+    background-color: #f1f8fd;
+    padding: 10px;
+    width: 23%;
+    margin-bottom: 15px;
+    border-radius: 40px;
+    margin: 30px auto;
+    box-shadow: 20px 20px 30px 0 rgba(0,0,0,0.1);
+    padding: 0 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.play-button {
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 26px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s;
+    box-shadow:
+      9px 9px 9px rgba(0,0,0,0.06),
+      -9px -9px 9px rgba(255,255,255,0.6),
+      inset 5px 5px 5px rgba(0,0,0,0.07),
+      inset -5px -5px 5px rgba(255,255,255,0.7);
+  }
+  
+  .play-button::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fed0b3;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    box-shadow:
+      inset 3px 3px 3px rgba(255,255,255,0.5),
+      inset -3px -3px 3px rgba(0,0,0,0.05);
+  }
+  
+  .play-button:hover::before {
+    box-shadow:
+      inset 3px 3px 3px rgba(255,255,255,0.35),
+      inset -3px -3px 3px rgba(0,0,0,0.035);
+  }
+  
+  .play-button:active::before {
+    box-shadow:
+      inset 3px 3px 3px rgba(0,0,0,0.05),
+      inset -3px -3px 3px rgba(255,255,255,0.5);
+  }
+
+  .cover {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f1f8fd;
+    box-shadow:
+      20px 20px 20px rgba(0,0,0,0.07),
+      -20px -20px 20px rgba(255,255,255,0.7),
+      6px 6px 6px rgba(0,0,0,0.09),
+      -6px -6px 6px rgba(255,255,255,0.9);
+  }
+  
+  .cover::after {
+    content: '';
+    content: '';
+    width: 30px;
+    height: 32px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow:
+    inset 5px 5px 5px rgba(0,0,0,0.07),
+    inset -5px -5px 5px rgba(255,255,255,0.7);
+    transform: translate(-50%, -50%);
+  }
+
+  .red:after{
+    background-color:#dd3f3fab;
+  }
+
+  .green:after{
+    background-color:#5bcc86ad;
+  }

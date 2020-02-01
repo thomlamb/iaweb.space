@@ -1,6 +1,8 @@
 import React, { Component } from 'react';  
 import Instance from '../Instance/Index';
 import data from './applications.json';
+import './index.css'
+
 
 class InstancePage extends Component{
     constructor(props) {
@@ -24,33 +26,21 @@ class InstancePage extends Component{
         //     .then(data => {console.log(data.applications[2]); this.setState({ test: data.length})});
     }
     getItemInfo(site){
-        // console.log(site.is_docker)
-
         if(site.is_docker){
             return 'yes';
         }return 'no'
     }
     getMinisites(site){
-        //  const mini =  Object.keys(site.minisites)
         let found = null;
         let arr = Object.keys(site.minisites);
-        // console.log(arr)
         arr.forEach(val => { 
              if (val) {
              found = val;
              return found
          }
         })
-
-        //  const minisitesls = Object.keys(site.minisites).forEach(element => {
-        //      let fount = null;
-
-        //     element.toString()
-        //     });
-        //  console.log(minisitesls)
     }
     render(){
-        // const instancelist = this.state.website.map((site) => <p> {site.type}</p>)
         const instancelist = this.state.website.map((site,) =>        
         <Instance 
             title={site.application_name}
@@ -60,11 +50,12 @@ class InstancePage extends Component{
             total_size={site.total_size}
             host={site.host}
             minisites={site.minisites}
-
         />)
         return(
-            <div>
-             {instancelist}
+            <div className="instance-container">
+                <ul className="instance-ul"> 
+                    {instancelist}
+                </ul>
             </div>
         )
     }
