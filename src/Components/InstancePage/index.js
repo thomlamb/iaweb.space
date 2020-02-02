@@ -62,9 +62,18 @@ class InstancePage extends Component{
                 </div>
                 <div className="instance-container">
                     <h2>liste de instances</h2>
-                    <ul className="instance-ul"> 
+                    <table className="instance-ul">
+                        <tr>
+                            <th>Ville</th>
+                            <th>Docker</th>
+                            <th>Environement</th>
+                            <th>ULR</th>
+                            <th>Taille</th>
+                            <th>Serveur</th>
+                            <th>Minisites</th>
+                        </tr>
                         {instancelist}
-                    </ul>
+                    </table>
                 </div>
             </div>
         )

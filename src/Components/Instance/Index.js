@@ -8,30 +8,24 @@ class Instance extends Component{
                       {obj}
                   </li>
                 )})
-            const siteName = () => {
-                return "111";
-            }
         return(
-            <li className="instance_elements">
-                <h3>{this.props.title}</h3>
-                <div className="docker">
-                    <span >Docker</span >
-                    <div class={"cover " + (this.props.is_docker === "yes" ? 'green': 'red')}>
-                    </div>
-                </div>
-                <p>{this.props.environment}</p>
-                <p>{this.props.vhost_name}</p>
-                <p>{this.props.total_size}</p>
-                <p>{this.props.host}</p>
-                <div>
-                    <span>{Object.keys(this.props.minisites).length}</span>
+            <tr className="instance_elements">
+                <td className="element_ville">{this.props.title}</td>
+                <td className="element_environment">{this.props.environment}</td>
+                <td className="element_url">{this.props.vhost_name}</td>
+                <td className="element_size">{this.props.total_size}</td>
+                <td className="element_serveur">{this.props.host}</td>
+                <td>
+                    <span className="element_minisite">{Object.keys(this.props.minisites).length}</span>
                     <ul>
-                        {/* {listMinisites} */}
+                        {/* {trstMinisites} */}
                     </ul>
                     {/* <button class="play-button"></button> */}
-                </div>
-                <br/>
-            </li>
+                </td>
+                <td className="docker">
+                   <span class={"cover " + (this.props.is_docker === "yes" ? 'green': 'red')}></span>
+                </td>
+            </tr>
                 
         )
     }

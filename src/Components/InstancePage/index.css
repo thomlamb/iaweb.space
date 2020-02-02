@@ -19,12 +19,18 @@
   0 0px 132px -16px rgba(0, 0, 0, 0.11)
 ;
 border-radius: 10px;
+max-width: 1300px;
+margin: 0 auto;
 }
 
 .instance-ul{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
-    flex-direction: column;
+    flex-direction: column; */
+}
+
+th{
+    text-align: left;
 }
